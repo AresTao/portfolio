@@ -17,12 +17,12 @@ import { useEffect } from "react";
 
 const App = ({ Component, pageProps }) => {
   useEffect(() => {
-    clarity.init("kcefbongzq");
+    clarity.init("nn32y4q9i2");
   }, []);
   return (
     <>
       <ChakraProvider theme={customTheme}>
-        <PlausibleProvider domain="danielwirtz.com">
+        <PlausibleProvider domain="joeywu.cn">
           <Head>
             <meta
               content="width=device-width, initial-scale=1"
