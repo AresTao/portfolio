@@ -13,7 +13,7 @@ const SEO = {
     description,
     images: [
       {
-        url: "https://joeywu.cn/static/images/banner.jpg",
+        url: "https://joeywu.cn/static/images/banner.png",
         alt: title,
         width: 2240,
         height: 1260,

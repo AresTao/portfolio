@@ -57,12 +57,7 @@ const Home = ({ posts }) => (
                 </Link>
               </HStack>
               <Text fontSize={["lg", "2xl"]}>
-                I'm Daniel. I'm a german entrepreneur, facilitator and designer
-                based in the Netherlands. Particularly interested in
-                collaboration and visual design. I like to read{" "}
-                <Link href="/books"> books</Link>, save{" "}
-                <Link href="/bookmarks">bookmarks</Link> and to occasionally
-                write <Link href="/blog">articles</Link>.
+              I’m Joey Wu, a full-time Machine Learning Engineer in DIDI inc which is the world's leading mobile transportation company as the leader of a team of six. I’m also a creator, codes and articles. As a fan of smallbets thinking, I’m working on a portfolio of small bets.
               </Text>
             </VStack>
           </VStack>
