@@ -27,7 +27,7 @@ class NewsletterLayout extends React.Component {
         <>
           <Section>
             <BlogSeo
-              url={`https://danielwirtz/blog/${this.props.post.Slug}`}
+              url={`https://joeywu.cn/blog/${this.props.post.Slug}`}
               image={this.props.post["Social Card"][0].thumbnails.large.url}
               title={this.props.post.Subject}
               publishDate={this.props.post["Published on"]}
@@ -59,7 +59,7 @@ class NewsletterLayout extends React.Component {
                   <AuthorCard
                     publishedAt={this.props.post["Pulished On"]}
                     url={
-                      "https://danielwirtz.com/archive/" + this.props.post.slug
+                      "https://joeywu.cn/archive/" + this.props.post.slug
                     }
                     readingTime={this.props.post.readingTime.text}
                   />

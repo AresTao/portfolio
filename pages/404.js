@@ -8,11 +8,11 @@ export default function NotFound() {
     <Container>
       <Center>
         <NextSeo
-          title="404 – Daniel Wirtz"
-          canonical="https://danielwirtz.com/404"
+          title="404 – Joey Wu"
+          canonical="https://joeywu.cn/404"
           openGraph={{
-            url: "https://danielwirtz.com/404",
-            title: "404 – Daniel Wirtz",
+            url: "https://joeywu.cn/404",
+            title: "404 – Joey Wu",
           }}
         />
         <VStack>

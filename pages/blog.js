@@ -32,7 +32,7 @@ export default function Blog({ posts }) {
         <VStack spacing={4}>
           <Hero
             title="Blog"
-            subtitle="Helpful tools, thoughtful articles and other findings from the web."
+            subtitle="Thoughtful articles about small bets I am working on."
           />
 
           <SubscribeCard

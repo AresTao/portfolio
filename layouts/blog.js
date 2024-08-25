@@ -42,7 +42,7 @@ class BlogLayout extends React.Component {
         <>
           <Section>
             <BlogSeo
-              url={`https://danielwirtz/blog/${this.props.post.slug}`}
+              url={`https://joeywu.cn/blog/${this.props.post.slug}`}
               image={this.props.post.coverImage}
               {...this.props.post}
             />
@@ -112,7 +112,7 @@ class BlogLayout extends React.Component {
                   <Heading as="h1">{this.props.post.title}</Heading>
                   <AuthorCard
                     publishedAt={this.props.post.publishDate}
-                    url={"https://danielwirtz.com/blog/" + this.props.post.slug}
+                    url={"https://joeywu.cn/blog/" + this.props.post.slug}
                     // readingTime={this.props.post.readingTime.text}
                   />
                 </VStack>
