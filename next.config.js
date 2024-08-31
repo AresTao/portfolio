@@ -8,6 +8,7 @@ const nextConfig = {
       "v5.airtableusercontent.com",
       "assets-global.website-files.com",
       "www.notion.so",
+      "supermemory.ai",
     ],
   },
 };

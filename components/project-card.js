@@ -13,15 +13,17 @@ import { usePalette } from "react-palette";
 import Link from "@/components/link";
 
 const ProjectCard = ({ name, description, logo, link, type }) => {
-  const { data, loading, error } = usePalette(logo[0].thumbnails.large.url);
+  const { data, loading, error } = usePalette(logo);
 
   const getTypeColor = (type) => {
-    if (type === "Web App") {
+    if (type === "Website") {
       return "teal";
     } else if (type === "Extension") {
       return "blue";
     } else if (type === "Community") {
       return "orange";
+    } else if (type === "InfoProduct") {
+      return "red";
     }
   };
 
@@ -60,7 +62,7 @@ const ProjectCard = ({ name, description, logo, link, type }) => {
             opacity={0.25}
           ></Box>
           <Image
-            src={logo ? logo[0].thumbnails.large.url : "/"}
+            src={logo ? logo : "/"}
             height={36}
             width={36}
             layout="fixed"

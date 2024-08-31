@@ -57,7 +57,10 @@ const Home = ({ posts }) => (
                 </Link>
               </HStack>
               <Text fontSize={["lg", "2xl"]}>
-              I’m Joey Wu, a full-time Machine Learning Engineer in DIDI.inc, which is the world's leading mobile transportation company. I’m also a creator, codes and articles. As a fan of small-bets thinking, I’m working on a portfolio of small bets.
+              I’m Joey Wu, a full-time Machine Learning Engineer in DIDI.inc, which is the world's leading mobile transportation company.
+              </Text>
+              <Text fontSize={["lg", "2xl"]}>
+              I’m also a creator, codes and articles. As a fan of small-bets thinking, I’m working on a portfolio of small bets.
               </Text>
             </VStack>
           </VStack>

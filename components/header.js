@@ -103,7 +103,7 @@ const Header = () => {
             <AvatarNavigation />
             <HStack ml={-4} spacing={2}>
               <NavLink href="/blog" name="Blog" />
-              <NavLink href="/about" name="About" />
+              <NavLink href="/projects" name="Projects" />
               <Menu isOpen={isOpen} onClose={onClose}>
                 <MenuButton
                   onMouseOver={onOpen}
@@ -119,7 +119,7 @@ const Header = () => {
                   }}
                   _active={useColorModeValue("neutral.200", "neutralD.200")}
                 >
-                  Lists
+                  Resources
                 </MenuButton>
                 <MenuList
                   bg={useColorModeValue("white", "neutralD.100")}
@@ -145,25 +145,10 @@ const Header = () => {
                     </MenuItem>
                   </Link>
                   
-                  <Link href="/tools" legacyBehavior>
-                    <MenuItem
-                      bg={useColorModeValue("white", "neutralD.100")}
-                      _hover={{
-                        bg: useColorModeValue("neutral.200", "neutralD.200"),
-                      }}
-                    >
-                      <HStack>
-                        <Icon
-                          as={BoltIcon}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Tools</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
+                  
                 </MenuList>
               </Menu>
+              <NavLink href="/about" name="About" />
             </HStack>
             <HStack>
               <ThemeToggle />
