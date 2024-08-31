@@ -1,8 +1,7 @@
 # joeywu.cn
+My personal portfolio.
 
-Welcome behind the curtain of my personal portfolio. Take a look around.
-
-This website is build using [Next.js](https://nextjs.org/) (React Framework), [Chakra UI](https://chakra-ui.com) (Component Library) and [Airtable](https://airtable.com/invite/r/HsvqbADg) / Notion as backend. 
+This website is build using [Next.js](https://nextjs.org/) (React Framework), [Chakra UI](https://chakra-ui.com) (Component Library) and [Airtable](https://airtable.com/invite/r/lZRqLnNl) / [Notion](https://www.notion.so/) as backend.
 
 ## Get it running locally
 
@@ -15,6 +14,6 @@ $ yarn
 $ yarn dev
 ```
 
-Make sure to add environmental variables, if you want to play around with the [Airtable](https://airtable.com/invite/r/lZRqLnNl) . To do so create a `.env.local` file similar to [`.env.example`](https://github.com/AresTao/portfolio/blob/master/.env.example).
+Make sure to add environmental variables, if you want to play around with the [Airtable](https://airtable.com/invite/r/lZRqLnNl) . To do so, You can create a `.env.local` file similar to [`.env.example`](https://github.com/AresTao/portfolio/blob/master/.env.example).
 
 Fork from https://github.com/wirtzdan/website
