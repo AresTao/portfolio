@@ -124,7 +124,7 @@ const Books = ({ books }) => {
 };
 
 export async function getStaticProps() {
-  const books = await getTable("Imported table");
+  const books = await getTable("books");
 
   return {
     props: {
