@@ -56,7 +56,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next dev",
+    "start": "next start",
     "inspect": "NODE_OPTIONS='--inspect' next dev -p 5000"
   }
 }
