@@ -9,6 +9,7 @@ const nextConfig = {
       "assets-global.website-files.com",
       "www.notion.so",
       "supermemory.ai",
+      "images.unsplash.com",
     ],
   },
 };
