@@ -48,7 +48,7 @@ class BlogLayout extends React.Component {
             />
             <article ref={target}>
               <VStack w="100%" align="left" spacing={6}>
-                {this.props.post.showBanner ? (
+                
                   <Box
                     mt={4}
                     rounded="lg"
@@ -67,7 +67,7 @@ class BlogLayout extends React.Component {
                       }}
                     />
                   </Box>
-                ) : undefined}
+                
                 {this.props.post.videoLink ? (
                   <AspectRatio
                     overflow="hidden"
