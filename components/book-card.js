@@ -16,12 +16,12 @@ import {
 import StarIconRating from "./star-rating";
 import { format, render, cancel, register } from "timeago.js";
 
-const BookCard = ({ name, description, category,rating, isFavorite, image  }) => {
+const BookCard = ({ title, author, rating, isFavorite, cover, dateRead }) => {
   return (
     <a
       href={
         "https://www.goodreads.com/search?utf8=%E2%9C%93&q=" +
-        encodeURIComponent(name)
+        encodeURIComponent(title)
       }
       target="_blank"
     >
@@ -52,7 +52,7 @@ const BookCard = ({ name, description, category,rating, isFavorite, image  }) =>
           backgroundColor="red.300"
         >
           <Image
-            src={image ? image : "/"}
+            src={cover ? cover[0].thumbnails.large.url : "/"}
             fit="cover"
           ></Image>
         </Box>
@@ -66,19 +66,19 @@ const BookCard = ({ name, description, category,rating, isFavorite, image  }) =>
         >
           <VStack spacing={0} align="start" flexGrow="1">
             <Text fontWeight="bold" fontSize="md" noOfLines={2}>
-              {name}
+              {title}
             </Text>
             <Text
               fontSize="md"
               color={useColorModeValue("neutral.900", "neutralD.1000")}
             >
-              {description}
+              {author}
             </Text>
           </VStack>
           <VStack spacing={0} align="start">
             <StarIconRating rating={rating} />
             <Text fontSize="xs" color="neutral.800">
-              {category}
+              {format(dateRead)}
             </Text>
           </VStack>
         </VStack>

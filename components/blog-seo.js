@@ -6,7 +6,7 @@ const BlogSeo = ({ title, summary, publishDate, url, image }) => {
   return (
     <>
       <NextSeo
-        title={`${title} – Joey Wu`}
+        title={`${title} – Daniel Wirtz`}
         description={summary}
         canonical={url}
         openGraph={{
@@ -28,13 +28,13 @@ const BlogSeo = ({ title, summary, publishDate, url, image }) => {
         }}
       />
       <ArticleJsonLd
-        authorName="Joey Wu"
+        authorName="Daniel Wirtz"
         dateModified={date}
         datePublished={date}
         description={summary}
         images={[image]}
         publisherLogo="/static/favicons/android-chrome-192x192.png"
-        publisherName="Joey Wu"
+        publisherName="Daniel Wirtz"
         title={title}
         url={url}
       />

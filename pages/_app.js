@@ -17,12 +17,12 @@ import { useEffect } from "react";
 
 const App = ({ Component, pageProps }) => {
   useEffect(() => {
-    clarity.init("nn32y4q9i2");
+    clarity.init("kcefbongzq");
   }, []);
   return (
     <>
       <ChakraProvider theme={customTheme}>
-        <PlausibleProvider domain="joeywu.cn">
+        <PlausibleProvider domain="danielwirtz.com">
           <Head>
             <meta
               content="width=device-width, initial-scale=1"
@@ -38,7 +38,7 @@ const App = ({ Component, pageProps }) => {
           </Head>
           <DefaultSeo {...SEO} />
           <Header />
-          <Box pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
+          <Box as="main" pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
             <Component {...pageProps} />
           </Box>
           <MobileNavigation />
