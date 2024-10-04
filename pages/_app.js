@@ -38,7 +38,7 @@ const App = ({ Component, pageProps }) => {
           </Head>
           <DefaultSeo {...SEO} />
           <Header />
-          <Box as="main" pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
+          <Box pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
             <Component {...pageProps} />
           </Box>
           <MobileNavigation />
