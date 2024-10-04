@@ -68,46 +68,7 @@ class BlogLayout extends React.Component {
                     />
                   </Box>
                 
-                {this.props.post.videoLink ? (
-                  <AspectRatio
-                    overflow="hidden"
-                    rounded="md"
-                    my={6}
-                    ratio={16 / 9}
-                  >
-                    {this.props.post.videoLink.includes("jmp.sh") ||
-                    this.props.post.videoLink.includes("facilitator.school") ? (
-                      <iframe
-                        src={this.props.post.videoLink}
-                        frameborder="0"
-                        webkitallowfullscreen
-                        mozallowfullscreen
-                        allowfullscreen
-                        style={{
-                          position: "absolute",
-                          top: "0",
-                          left: "0",
-                          width: "100%",
-                          height: "100%",
-                        }}
-                      ></iframe>
-                    ) : (
-                      <ReactPlayer
-                        width="100%"
-                        height="100%"
-                        url={this.props.post.videoLink}
-                        light={
-                          this.props.post.coverImage
-                            ? this.props.post.coverImage
-                            : true
-                        }
-                        controls
-                        playing
-                        playIcon={<PlayIconWrapper />}
-                      ></ReactPlayer>
-                    )}
-                  </AspectRatio>
-                ) : undefined}
+                
                 <VStack align="stretch" spacing={6} mb={4}>
                   <Heading as="h1">{this.props.post.title}</Heading>
                   <AuthorCard
