@@ -1,7 +1,7 @@
 {
-  "name": "new-website",
+  "name": "joeywu.cn",
   "version": "1.0.0",
-  "author": "Daniel Wirtz",
+  "author": "Joey Wu",
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.1",
