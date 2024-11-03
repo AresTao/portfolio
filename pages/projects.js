@@ -18,14 +18,12 @@ import {
   Link,
 } from "@chakra-ui/react";
 import PageTransition from "../components/page-transitions";
-import { getTable } from "@/lib/airtable";
 import Section from "@/components/section";
 import ProjectCard from "@/components/project-card";
 import { ListBulletIcon, BookmarkIcon } from "@heroicons/react/24/solid";
-import sorter from "sort-isostring";
 import Hero from "@/components/hero";
 
-const Projects = ({ projects }) => {
+const Projects = () => {
   const StyledTab = chakra("button", { themeKey: "Tabs.Tab" });
 
   return (
@@ -76,16 +74,13 @@ const Projects = ({ projects }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacingY={8} spacingX={4} mt={8}>
                   {projects
-                    .sort((x, y) =>
-                      sorter(y.fields["CreateTime"], x.fields["CreateTime"])
-                    )
                     .map((project) => (
                       <ProjectCard
-                        name={project.fields.Name}
-                        description={project.fields.Description}
-                        logo={project.fields.Logo}
-                        link={project.fields.Link}
-                        type={project.fields.Type}
+                        name={project.name}
+                        description={project.description}
+                        logo={project.logo}
+                        link={project.link}
+                        type={project.type}
                       />
                     ))}
                 </SimpleGrid>
@@ -93,17 +88,14 @@ const Projects = ({ projects }) => {
               <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacingY={8} spacingX={4} mt={8}>
                   {projects
-                    .filter((b) => b.fields.Status === "Ongoing")
-                    .sort((x, y) =>
-                      sorter(y.fields["CreateTime"], x.fields["CreateTime"])
-                    )
+                    .filter((b) => b.status === "Ongoing")
                     .map((project) => (
                       <ProjectCard
-                        name={project.fields.Name}
-                        description={project.fields.Description}
-                        logo={project.fields.Logo}
-                        link={project.fields.Link}
-                        type={project.fields.Type}
+                        name={project.name}
+                        description={project.description}
+                        logo={project.logo}
+                        link={project.link}
+                        type={project.type}
                       />
                     ))}
                 </SimpleGrid>
@@ -116,15 +108,64 @@ const Projects = ({ projects }) => {
   );
 };
 
-export async function getStaticProps() {
-  const projects = await getTable("projects");
 
-  return {
-    props: {
-      projects,
-    },
-    revalidate: 10,
-  };
-}
+const projects = [
+  {
+    name: "pintowebsite",
+    description: "Pin every link you are interested in and make them into a website to serve others.",
+    type: "Saas",
+    tags:"notion,airtable",
+    logo:"/portfolio/pintowebsite.png",
+    link:"https://pintowebsite.cn",
+    report:"https://pintowebsite.cn/blog",
+    icon:"/portfolio/pintowebsite-icon.png",
+    status:"Ongoing",
+  },
+  {
+    name: "nailsmallbets",
+    description: "Diversify your income with multiple small bets.",
+    type: "InfoProduct",
+    tags:"small bets",
+    logo:"/portfolio/nailsmallbets.png",
+    link:"https://nailsmallbets.com",
+    report:"https://nailsmallbets.com",
+    icon:"/portfolio/nailsmallbets-icon.png",
+    status:"Ongoing",
+  },
+  {
+    name: "bizideas",
+    description: "If you want to do something your own yet don't know what to do, check here.",
+    type: "InfoProduct",
+    tags:"biz ideas",
+    logo:"/portfolio/bizideas.png",
+    link:"https://bizideas.cn",
+    report:"https://bizideas.cn",
+    icon:"/portfolio/bizideas-icon.png",
+    status:"Ongoing",
+  },
+  {
+    name: "shipwebsite",
+    description: "Ship your website fast.",
+    type: "Saas",
+    tags:"website",
+    logo:"/portfolio/shipwebsite.png",
+    link:"https://shipweb.site",
+    report:"https://shipweb.site",
+    icon:"/portfolio/shipwebsite-icon.png",
+    status:"Ongoing",
+  },
+  {
+    name: "wuzhantao.com",
+    description: "My Chinese portfolio website.",
+    type: "Website",
+    tags:"personal portfolio",
+    logo:"/portfolio/joeywu.png",
+    link:"https://wuzhantao.com",
+    report:"https://wuzhantao.com",
+    icon:"/portfolio/joeywu-icon.png",
+    status:"Ongoing",
+  },
+];
+
 
 export default Projects;
